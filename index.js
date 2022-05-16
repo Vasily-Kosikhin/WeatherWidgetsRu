@@ -112,8 +112,11 @@
       const weatherAPI = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=ru&units=metric&appid=fb37c7b6bfeb4b3368e4e5ccb1ccf167`;
       let weatherRespose = await fetch(weatherAPI);
       let weatherTown = await weatherRespose.json();
-
-      // entryField.value = weatherTown.name
+      entryField.value = weatherTown.name
+      if(weatherTown.name == `Аптекарский`) {
+        entryField.value = `Санкт-Петербург`
+      }
+      
       let temperature = document.querySelector(`#temperature`)
       let weatherIcon = document.querySelector(`#weatherIcon`)
       let weatherStatus = document.querySelector(`#weatherStatus`)
