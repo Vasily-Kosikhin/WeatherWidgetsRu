@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<meta charset="UTF-8">
+
+
+<head>
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <style>
+                *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font: italic bold 16px/2;
+        }
+
+        .townsBlock {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+        .towns {
+            height: 50px;
+            width: 200px;
+            display: block;
+            font: 25px "Fira Sans", serif;
+            border: 1px solid black;
+        }
+
+        .tipsList {
+            list-style-type: none;
+            width: 200px;
+            position: absolute;
+            cursor: pointer;
+            font: 25px "Fira Sans", serif;
+            border-radius: 5px
+        }
+
+        li {
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .main {
+            width: 500px;
+            height: 50px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            outline: 2px solid grey;
+            border-radius: 5px;
+        }
+
+        .towns {
+            text-align: center;
+        }
+        .currentTown {
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .townForm {
+            width: 200px;
+            display: flex;
+            justify-content: center;
+        }
+        .temperature {
+            width: 60px;
+            text-align: center;
+            font: bold italic 40px "Fira Sans", serif;
+            vertical-align: center;
+            color: rgba(219, 223, 4, 0.842);
+        }
+        .weatherIcon {
+            width: 60px;
+        }
+        .statusBlock {
+            width: 150px;   
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .weatherStatus {
+            text-align: center;
+            font: italic 0.8em "Fira Sans", serif;
+        }
+
+        .windStatus {
+            text-align: center;
+            font: italic 0.8em "Fira Sans", serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <div class="main" id="main">
+            <button class="currentTown" id="currentTown"><i class="fa fa-map-marker fa-3x" aria-hidden="true"></i></button>
+            <form class="townForm" id="townForm">
+                <div class="townsBlock">
+                    <input class="towns" id="entryField" placeholder="Выберите город" autocomplete="off">
+                </div>
+            </form>
+            <div class="temperature" id="temperature"></div>
+            <!-- <div class="weatherIcon" id="weatherIcon">weatherIcon</div> -->
+            <img class="weatherIcon" id="weatherIcon" src="" alt="">
+            <div class="statusBlock" id="statusBlock">
+                <div class="weatherStatus" id="weatherStatus"></div>
+                <div class="windStatus" id="windStatus"></div>
+            </div>
+        </div>
+        
+        <ul class="tipsList" id="townsTips">
+        </ul>
+    </div>
+    
+
+<script src="./index.js"></script>
+</body>
+
+
+</html>
